@@ -1,0 +1,49 @@
+{
+  "name": "coupon-brain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "COUPON BRAIN — a coupon discovery and savings platform.",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "db:recount": "tsx scripts/recount.ts",
+    "db:reset": "tsx scripts/reset.ts",
+    "db:studio": "drizzle-kit studio",
+    "qa": "npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.11",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.4",
+    "lucide-react": "^0.548.0",
+    "next": "^15.5.28",
+    "postgres": "^3.4.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^15.5.28",
+    "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  },
+  "overrides": {
+    "postcss": "^8.5.31",
+    "braces": "^3.0.3",
+    "micromatch": "^4.0.8"
+  }
+}
